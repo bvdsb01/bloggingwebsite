@@ -1,0 +1,15 @@
+<%- include("partials/header") -%>
+    <h1>Hello World</h1>
+    <p>
+        <%= startingContent %>
+    </p>
+    <% posts.forEach(function(pos){ %>
+        <h1>
+            <%= pos.title %>
+        </h1>
+        <p>
+            <%= pos.content.slice(0,100)+" ..." %>
+        </p>
+        <a href="post/<%=pos.title%>"> Read More</a>
+        <% })%>
+            <%- include("partials/footer") -%>
